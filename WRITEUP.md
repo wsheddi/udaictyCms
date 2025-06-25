@@ -48,8 +48,20 @@ If requirements changed (e.g., custom OS-level software or complex scheduled job
 | Control            | Platform-level        | Full OS-level  |
 
 ---
+Certainly! Here’s a well-written, detailed section for your `writeup.md` to explain **how the app and its requirements would change if you chose a different solution, and what other needs might require changes.**
 
-## 5. References
+---
+
+## 5. Application Changes and Additional Needs
+
+If I had chosen to deploy the CMS on a Virtual Machine instead of Azure App Service, the application setup and maintenance would be significantly different. Using a VM would provide full control over the operating system, network configuration, and installed software, making it possible to meet advanced customization or legacy requirements. However, this also means I would need to manage OS updates, security patching, server monitoring, and manual scaling, increasing the complexity and operational overhead.
+
+If my application required custom background services, scheduled tasks outside the web server, or specialized software dependencies not supported by App Service, I would need to switch to a VM and update my deployment and maintenance procedures. This could include writing custom scripts for automated backups, implementing robust monitoring solutions, or configuring advanced networking and security settings (such as VPN integration or firewalls). Additionally, any requirement for high-performance workloads, GPU support, or non-standard runtime environments might also make a VM—or even Azure Kubernetes Service—a better choice.
+
+Choosing App Service means I sacrifice some control over the infrastructure, but I gain simplicity, automated scaling, built-in high availability, and lower maintenance costs. If future requirements demand more control or custom components, the infrastructure and workflows would need to be adapted accordingly.
+
+---
+## 6. References
 
 * [Microsoft: App Service vs. Virtual Machines](https://learn.microsoft.com/en-us/azure/app-service/overview)
 * [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
